@@ -1,0 +1,108 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="IV?(_k*P{Vo!Wf/:3X0B">product</variable>
+    <variable id=":L+DWG[.7Dvb=|RILdoN">dis</variable>
+    <variable id="!0*R],9s3CALrFB$u8cW">sale</variable>
+  </variables>
+  <block type="math_change" id="X#gL,/f5+J%nnvB1yD%j" x="77" y="41">
+    <field name="VAR" id="IV?(_k*P{Vo!Wf/:3X0B">product</field>
+    <field name="NAME">=</field>
+    <value name="DELTA">
+      <shadow type="indata" id=";Gs%B[(J$0LLVyeJm*Ch">
+        <field name="indata1">3</field>
+      </shadow>
+      <block type="convert_block" id="0Fkv|q,J|otVYg_o7)$7">
+        <field name="NAME">int(</field>
+        <value name="A">
+          <shadow type="indata" id="?O=pBVQ)p)diF^82c)zH">
+            <field name="indata1">1</field>
+          </shadow>
+          <block type="input1" id="^@Bi#0X0sZxD{x844+z-">
+            <value name="content1">
+              <shadow type="indata" id="b.8C)v9E]}kN-+i/-*HC">
+                <field name="indata1">"상의 가격 :"</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="printtv" id="WkH1Hu5/X@g_UI?SsT[~">
+        <value name="content1">
+          <shadow type="indata" id="!cG69WB%-%?M31c$1;@M">
+            <field name="indata1">"상의 가격 :"</field>
+          </shadow>
+        </value>
+        <value name="content2">
+          <block type="variables_get" id="h{T/Z#hkoU5@b(hys@iG">
+            <field name="VAR" id="IV?(_k*P{Vo!Wf/:3X0B">product</field>
+          </block>
+        </value>
+        <next>
+          <block type="math_change" id=";j?j?OcSB)nLD*}Xm[;5">
+            <field name="VAR" id=":L+DWG[.7Dvb=|RILdoN">dis</field>
+            <field name="NAME">=</field>
+            <value name="DELTA">
+              <shadow type="indata" id="3_-^fi57%ds(ub^pRL_a">
+                <field name="indata1">0.5</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="math_change" id="`nA6c@tgZim.7E(!1E!r">
+                <field name="VAR" id="!0*R],9s3CALrFB$u8cW">sale</field>
+                <field name="NAME">=</field>
+                <value name="DELTA">
+                  <shadow type="indata" id="9nu``B+]mp[f=@z^G+oM">
+                    <field name="indata1">3</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="W3/1S|pM?@p[%ow!y-kI">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <shadow type="indata" id="o^*d`6g}:5em2,$NTU|2">
+                        <field name="indata1">product</field>
+                      </shadow>
+                      <block type="variables_get" id="Hl?-M^aqAHvVJnuS!Z8w">
+                        <field name="VAR" id="IV?(_k*P{Vo!Wf/:3X0B">product</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="indata" id="AwjCZ8.-jJIA~x*s($Kw">
+                        <field name="indata1">dis</field>
+                      </shadow>
+                      <block type="variables_get" id="1S3wvf-RN}piqCBuw;)}">
+                        <field name="VAR" id=":L+DWG[.7Dvb=|RILdoN">dis</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="printtv" id="Mw^#3v@Gom#M2)[XSd[D">
+                    <value name="content1">
+                      <shadow type="indata" id="!Klo7wftFB0Uy`5.X:XC">
+                        <field name="indata1">"할인가 :"</field>
+                      </shadow>
+                    </value>
+                    <value name="content2">
+                      <block type="convert_block" id="3|fPltj0Ubu=vi.I~-!p">
+                        <field name="NAME">int(</field>
+                        <value name="A">
+                          <shadow type="indata" id="4O)[]0nZRJ.Hfp]cMm^j">
+                            <field name="indata1">1</field>
+                          </shadow>
+                          <block type="variables_get" id="JM?Gp7S+UsiwD8(QZ.:7">
+                            <field name="VAR" id="!0*R],9s3CALrFB$u8cW">sale</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
